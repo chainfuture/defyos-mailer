@@ -58,7 +58,7 @@ app.post('/sendmail', (req, res) => {
         to: process.env.EMAIL,
         from: req.body.from
       });
-
+      res.json({"message": "Email being sent"});
 })
 
 app.listen(3000, () => console.log('listening on port 3000'));
